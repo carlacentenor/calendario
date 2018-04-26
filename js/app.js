@@ -45,7 +45,7 @@ eventsData.on('value', function (datos) {
       $('#titleEvent').text(`${callEvent.title}`);
       titleEdit.val(`${callEvent.title}`);
       dateEdit.val(`${callEvent.start._i}`);
-      dateEndEdit.val(`${fullDay}`);
+      dateEndEdit.val(`${fullDay.substr(0,10)}`);
       descriptionEdit.val(`${callEvent.descripcion}`);
       stateEdit.val(`${callEvent.state}`);
       localStorage.idSelect = `${callEvent.id}`
@@ -82,7 +82,7 @@ $('#btn-add').on('click', function () {
   eventsDataNew.set({
     title: titleNew.val(),
     start: dateNew.val(),
-    end: dateEndNew.val(),
+    end: dateEndNew.val() +' 24:00:00',
     descripcion: descriptionNew.val(),
     state: localStorage.stateNew,
     id: id,
@@ -93,7 +93,7 @@ $('#btn-add').on('click', function () {
     $('#calendar').fullCalendar('renderEvent', {
       title: titleNew.val(),
       start: dateNew.val(),
-      end: dateEndNew.val(),
+      end: dateEndNew.val() +' 24:00:00',
       descripcion: descriptionNew.val(),
       state: localStorage.stateNew,
       id: id,
@@ -113,7 +113,7 @@ $('#update').on('click', function () {
   eventUpdate.update({
     title: titleEdit.val(),
     start: dateEdit.val(),
-    end: dateEndEdit.val(),
+    end: dateEndEdit.val() +' 24:00:00',
     descripcion: descriptionEdit.val(),
     state: localStorage.stateEdit,
     color: stateColor(localStorage.stateEdit)
