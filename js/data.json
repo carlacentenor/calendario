@@ -1,0 +1,20 @@
+{
+  "eventos": {
+    "0": {
+      "title": "Evento 1",
+      "descripcion": "Interesante",
+      "start": "2018-04-01",
+      "end": "2018-04-03",
+      "color": "red",
+      "state": "1"
+    },
+    "1": {
+      "title": "Evento 2",
+      "descripcion": "Interesansasate",
+      "start": "2018-04-06",
+      "end": "2018-04-06",
+      "color": "green",
+      "state": "2"
+    }
+  }
+}
